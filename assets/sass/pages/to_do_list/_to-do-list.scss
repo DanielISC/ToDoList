@@ -1,0 +1,27 @@
+.list {
+  list-style: none;
+  .task-card{
+    background: $color-light-grey;
+    color: $color-primary-font-color;
+    @include task-card;
+  }
+  .task-card-completed{
+    background: $color-light-green;
+    color: $color-white;
+    @include task-card;
+  }
+
+}
+
+.add-form{
+  input{
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 4px;
+    border-color: black;
+  }
+}
+
+.completed{
+  padding: 0 5px;
+}

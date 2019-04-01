@@ -1,0 +1,6 @@
+<div class="add-form">
+    <form ng-submit="create(activity)">
+        <input type="text" ng-model="activity" ng-maxlength="20" placeholder="Add activity" ng-change="addActivity(activity)">
+        <button type="submit" disabled="true" class="btn-add" ng-disabled="add">Add</button>
+    </form>
+</div>

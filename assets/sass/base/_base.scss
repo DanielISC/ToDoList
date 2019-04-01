@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 0;
+  font-family: $font-primary;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center
+}
+
+h1{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 55px;
+  text-align: center;
+}
+
+.btn-add {
+  @include  btn-color($btn-add)
+}
+.btn-save {
+  @include  btn-color($btn-save)
+}
+.btn-cancel {
+  @include  btn-color($btn-cancel)
+}
+.btn-delete {
+  @include  btn-color($btn-delete)
+}

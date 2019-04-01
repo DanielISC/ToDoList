@@ -1,0 +1,27 @@
+<!--<ul ng-controller="ListController">-->
+<ul class="list">
+    <li ng-repeat="activity in activities">
+        <div class="task-card" ng-hide="activity.completed">
+            <div ng-hide="activity.edit">
+                <input type="checkbox" ng-model="activity.completed" ng-change="changeStatus()"/>
+                <span>{{activity.task}} </span>
+                <button ng-hide="activity.completed" class="btn-add" ng-click="statusEdit($index, true)">Edit</button>
+            </div>
+            <div ng-show="activity.edit">
+                <input ng-model="activity.task" />
+                <button class="btn-cancel" ng-click="statusEdit($index, false)">Cancel</button>            
+                <button class="btn-save" ng-click="statusEdit($index, false)">Save</button>
+            </div>
+        </div>
+        <div class="task-card-completed" ng-show="activity.completed">
+            <div>
+                <input type="checkbox" ng-model="activity.completed" ng-change="changeStatus()"/>
+                <span>{{activity.task}} </span>
+                <p class="completed">Completed</p>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="completed">
+    <button class="btn-delete" ng-click="delete()">Delete Completed</button>
+</div>
